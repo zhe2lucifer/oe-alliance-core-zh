@@ -6,7 +6,8 @@ PACKAGE_ARCH := "${MACHINE_ARCH}"
 
 inherit gitpkgv
 
-SRC_URI = "git:///media/zhe22/git/e2/tuxtxt.git;branch=master \
+#SRC_URI = "git:///media/zhe22/git/e2/tuxtxt.git;branch=master 
+SRC_URI = "git://github.com/zhe2lucifer/tuxtxt-zh.git;branch=master \
 "
 
 # SRC_URI_append_sh4 = " \

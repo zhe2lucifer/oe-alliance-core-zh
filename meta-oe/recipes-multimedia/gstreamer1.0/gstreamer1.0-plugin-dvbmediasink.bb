@@ -17,7 +17,8 @@ RDEPENDS_${PN} = " \
 GSTVERSION = "1.0"
 
 #SRC_URI = "git://github.com/christophecvr/gstreamer1.0-plugin-multibox-dvbmediasink;branch=openatv-dev;protocol=git"
-SRC_URI = "git:///media/zhe22/git/e2/gstreamer1.0-plugin-multibox-dvbmediasink.git;branch=openatv-dev-ali"
+SRC_URI = "git://github.com/zhe2lucifer/gstreamer1.0-plugin-multibox-dvbmediasink-zh.git;branch=master"
+#SRC_URI = "git:///media/zhe22/git/e2/gstreamer1.0-plugin-multibox-dvbmediasink.git;branch=openatv-dev-ali"
 
 S = "${WORKDIR}/git"
 

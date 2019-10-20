@@ -13,7 +13,8 @@ SRCREV = "${AUTOREV}"
 PV = "2.0+git${SRCPV}"
 PKGV = "2.0+git${GITPKGV}"
 
-SRC_URI = "git:///media/zhe22/git/e2/tuxtxt.git;branch=master \
+#SRC_URI = "git:///media/zhe22/git/e2/tuxtxt.git;branch=master 
+SRC_URI = "git://github.com/zhe2lucifer/tuxtxt-zh.git;branch=master \
            ${@bb.utils.contains('DISTRO_FEATURES', 'tuxtxtfhd', ' \
            file://tuxtxt.ttf \
            file://tuxtxt_nonbold.ttf \

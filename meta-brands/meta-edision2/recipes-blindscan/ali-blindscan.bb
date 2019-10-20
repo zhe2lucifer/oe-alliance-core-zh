@@ -12,7 +12,8 @@ RDEPENDS_${PN} = " \
     ${@bb.utils.contains("MACHINE_FEATURES", "aliaui", "aui" , "", d)} \
     "
 
-SRC_URI = "git:///media/zhe22/git/alisdk/blindscan.git;branch=master"
+#SRC_URI = "git:///media/zhe22/git/alisdk/blindscan.git;branch=master"
+SRC_URI = "git://github.com/zhe2lucifer/blindscan-zh.git;branch=master"
 
 inherit gitpkgv
 SRCREV = "${AUTOREV}"

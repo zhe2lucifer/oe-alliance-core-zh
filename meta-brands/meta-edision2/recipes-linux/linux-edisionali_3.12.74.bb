@@ -21,7 +21,8 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 PR[vardepsxeclude]="DATETIME"
 
-SRC_URI += "git:///media/zhe22/git/alisdk/linux-kernel.git;branch=6.8.3.2-dev \
+#SRC_URI += "git:///media/zhe22/git/alisdk/linux-kernel.git;branch=6.8.3.2-dev
+SRC_URI += "git://github.com/zhe2lucifer/linux-kernel-zh.git;branch=6.8.3.2-dev \
     file://defconfig \
     "
 SRCREV = "${AUTOREV}"

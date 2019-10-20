@@ -23,7 +23,9 @@ BRANCH="master-dev"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 #SRC_URI="git://github.com/oe-alliance/branding-module.git;protocol=git;branch=${BRANCH}"
-SRC_URI="git:///media/zhe22/git/e2/branding-module.git;branch=${BRANCH}"
+#SRC_URI="git:///media/zhe22/git/e2/branding-module.git;branch=${BRANCH}"
+SRC_URI="git://github.com/zhe2lucifer/branding-module-zh.git;branch=${BRANCH}"
+
 SRC_URI_append_openatv=" \
 	file://openatv_mappings.patch \
 "

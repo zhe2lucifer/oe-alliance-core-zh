@@ -5,7 +5,8 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS = "pkgconfig"
 
-SRC_URI = "git:///media/zhe22/git/alisdk/aliplatform.git;branch=6.8.3.2-dev"
+#SRC_URI = "git:///media/zhe22/git/alisdk/aliplatform.git;branch=6.8.3.2-dev"
+SRC_URI = "git://github.com/zhe2lucifer/bbb-zh.git;branch=6.8.3.2-dev"
 SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"

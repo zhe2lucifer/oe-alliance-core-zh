@@ -2,7 +2,7 @@ require recipes-kernel/linux-libc-headers/linux-libc-headers.inc
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/git/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-SRC_URI = "git:///media/zhe22/git/alisdk/linux-kernel.git;branch=6.8.3.2-dev"
+SRC_URI = "git://github.com/zhe2lucifer/linux-kernel-zh.git;branch=6.8.3.2-dev"
 SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git"

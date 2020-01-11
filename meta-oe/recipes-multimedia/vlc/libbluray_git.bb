@@ -26,6 +26,10 @@ EXTRA_OECONF = " \
     --without-freetype \
     --without-fontconfig \
 "
+do_configure_prepend() {
+    git submodule init
+    git submodule update
+}
 
 do_package_qa() {
 }

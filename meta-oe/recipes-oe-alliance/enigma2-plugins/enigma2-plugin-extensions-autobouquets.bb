@@ -4,7 +4,9 @@ MAINTAINER = "LraiZer"
 HOMEPAGE = "https://github.com/LraiZer/AutoBouquets"
 SECTION = "extra"
 PRIORITY = "optional"
-
+DEPENDS = "libpng freetype ${@bb.utils.contains("MACHINE_FEATURES", "aliaui", "aui" , "", d)}"
+#RDEPENDS_${PN} = "${@bb.utils.contains("MACHINE_FEATURES", "aliaui", "ali-bsp aui" , "", d)}"
+    
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "\
     file://LICENSE;md5=a23a74b3f4caf9616230789d94217acb \
@@ -26,9 +28,13 @@ SRC_URI="git://github.com/LraiZer/AutoBouquets.git;branch=${AUTOBOUQUETS_BRANCH}
 S = "${WORKDIR}/git"
 
 FILES_${PN} = "/usr/lib/enigma2/python/Plugins/Extensions/AutoBouquets"
+
 D_FILES_PN = "${D}${FILES_${PN}}"
 
+CXXFLAGS += "-I${STAGING_INCDIR}/ali_common -laui"
+
 EXTRA_OECONF = ""
+#EXTRA_OECONF = "${@bb.utils.contains("MACHINE_FEATURES", "aliaui", "--with-aliaui" , "", d)}"
 
 do_install() {
     install -d ${D_FILES_PN}
@@ -86,3 +92,5 @@ rm -rf ${FILES_${PN}} > /dev/null 2>&1
 exit 0
 
 }
+
+INSANE_SKIP_${PN} += "dev-deps"

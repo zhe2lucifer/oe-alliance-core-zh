@@ -3,6 +3,7 @@ DESCRIPTION = "Automatically build and update bouquets from the DVB stream."
 MAINTAINER = "oe-alliance team"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=84dcc94da3adb52b53ae4fa38fe49e5d"
+DEPENDS = "libpng freetype ${@bb.utils.contains("MACHINE_FEATURES", "aliaui", "aui" , "", d)}"
 
 inherit autotools-brokensep gitpkgv pythonnative gettext
 
@@ -22,7 +23,11 @@ EXTRA_OECONF = " \
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "enigma2"
+DEPENDS += "enigma2"
+
+CFLAGS += "-I${STAGING_INCDIR}/ali_common"
+CPPFLAGS += "-I${STAGING_INCDIR}/ali_common"
+CXXFLAGS += "-I${STAGING_INCDIR}/ali_common -laui"
 
 INSANE_SKIP_${PN} += "already-stripped ldflags"
 
@@ -47,3 +52,4 @@ else
 	echo "No cache file found, continuing."
 fi
 }
+INSANE_SKIP_${PN} += "dev-deps"
